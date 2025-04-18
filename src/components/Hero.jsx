@@ -90,6 +90,7 @@ const Hero = () => {
             className="flex flex-col md:flex-row justify-center gap-4 md:gap-6"
           >
             <motion.button
+            onClick={()=> window.location.href = '/services'}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-br from-orange-500 to-amber-600 hover:from-orange-400 hover:to-amber-500 px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 transition-all duration-300"
@@ -98,6 +99,7 @@ const Hero = () => {
             </motion.button>
             
             <motion.button
+            onClick={()=> window.location.href = '/projects'}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="border-2 border-gray-700 hover:border-orange-500 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:text-orange-500 transition-all duration-300"
