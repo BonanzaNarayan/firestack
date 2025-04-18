@@ -6,6 +6,7 @@ import Pricing from './pages/Pricing'
 import Contact from './pages/Contact'
 import Projects from './pages/Projects'
 import About from './pages/About'
+import Quote from './pages/Quote'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path='/contact' element={<Contact />} />
       <Route path='/about' element={<About />} />
       <Route path='/projects' element={<Projects />} />
+      <Route path='/quote' element={<Quote />} />
     </Routes>
   )
 }

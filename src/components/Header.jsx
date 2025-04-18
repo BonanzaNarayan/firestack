@@ -63,7 +63,7 @@ const Header = () => {
           </motion.a>
         ))}
         <motion.button
-        onClick={()=> window.location.href="/contact"}
+        onClick={()=> window.location.href="/quote"}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="ml-4 bg-gradient-to-br from-orange-500 to-amber-600 hover:from-orange-400 hover:to-amber-500 px-6 py-2.5 rounded-xl font-semibold text-white shadow-lg shadow-orange-500/20 transition-all"
@@ -110,7 +110,7 @@ const Header = () => {
                 </motion.a>
               ))}
               <motion.button
-              onClick={()=> window.location.href="/contact"}
+              onClick={()=> window.location.href="/quote"}
                 variants={linkVariants}
                 className="mt-4 bg-orange-500 hover:bg-orange-600 w-full py-3 rounded-xl font-semibold transition"
               >

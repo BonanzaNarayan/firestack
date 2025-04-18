@@ -7,6 +7,7 @@ import { BsInstagram } from 'react-icons/bs';
 const Footer = () => {
   const footerLinks = [
     { text: "Services", href: "/services" },
+    { text: "Quote", href: "/quote" },
     { text: "Projects", href: "/projects" },
     { text: "Pricing", href: "/pricing" },
     { text: "Contact", href: "/contact" },
