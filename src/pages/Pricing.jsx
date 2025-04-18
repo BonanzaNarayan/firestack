@@ -217,12 +217,14 @@ const Pricing = () => {
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <motion.button
+              onClick={()=> window.location.href = '/contact'}
                 whileHover={{ scale: 1.05 }}
                 className="bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-xl font-semibold transition-colors"
               >
                 Request Custom Quote
               </motion.button>
               <motion.button
+              onClick={()=> window.location.href = '/contact'}
                 whileHover={{ scale: 1.05 }}
                 className="border border-gray-700 hover:border-orange-500 px-8 py-4 rounded-xl font-semibold transition-colors"
               >
