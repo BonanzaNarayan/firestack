@@ -11,20 +11,20 @@ const Pricing = () => {
     {
       title: "Starter Website",
       price: "GHS 1,500 – 2,500",
-      icon: <FaRocket />,
+      icon: <FaRocket size={32} />, 
       features: [
         "1–5 Responsive Pages",
-        "Firebase Contact Form",
+        "Basic Email Contact Form",
         "Basic SEO Setup",
         "Netlify Hosting",
-        "1 Week Delivery"
+        "3 Week Delivery"
       ],
       description: "Perfect for personal brands and small businesses"
     },
     {
       title: "Business Web App",
       price: "GHS 3,500 – 6,500",
-      icon: <FaChartLine />,
+      icon: <FaChartLine size={32} />, 
       features: [
         "User Authentication",
         "Firestore Integration",
@@ -37,7 +37,7 @@ const Pricing = () => {
     {
       title: "Premium SaaS Platform",
       price: "GHS 8,000 – 15,000+",
-      icon: <FaFire />,
+      icon: <FaFire size={32} />, 
       features: [
         "All Features from Business Plan",
         "Payment Gateway Integration",
@@ -49,21 +49,21 @@ const Pricing = () => {
       description: "Enterprise-grade solutions for scale"
     }
   ];
-
+  
   const addOns = [
-    { feature: "Payment Gateway", price: "600 – 1,000" },
-    { feature: "Admin Dashboard", price: "800 – 1,500" },
-    { feature: "Blog/CMS", price: "600 – 1,200" },
-    { feature: "Email Notifications", price: "400 – 800" },
-    { feature: "Google Maps", price: "300 – 800" },
+    { feature: "Payment Gateway", price: "GHS 600 – 1,000" },
+    { feature: "Admin Dashboard", price: "GHS 800 – 1,500" },
+    { feature: "Blog/CMS", price: "GHS 600 – 1,200" },
+    { feature: "Email Notifications", price: "GHS 400 – 800" },
+    { feature: "Google Maps", price: "GHS 300 – 800" },
     { feature: "WhatsApp Widget", price: "Free – 200" }
   ];
-
+  
   const firebasePricing = [
-    { resource: "Firestore", free: "50K reads, 20K writes", paid: "~GHS 0.06 / 100K reads" },
+    { resource: "Firestore Reads/Writes", free: "50K reads, 20K writes", paid: "~GHS 0.06 / 100K reads" },
     { resource: "Storage", free: "1GB", paid: "~GHS 0.23 / GB" },
     { resource: "Auth", free: "10K logins", paid: "~GHS 0.06 / 10K" },
-    { resource: "Hosting", free: "1GB, 10GB bandwidth", paid: "Usage-based" }
+    { resource: "Hosting", free: "1GB + 10GB bandwidth", paid: "Usage-based" }
   ];
 
   const cardVariants = {
