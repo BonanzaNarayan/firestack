@@ -26,11 +26,13 @@ const Pricing = () => {
       price: "GHS 3,500 – 6,500",
       icon: <FaChartLine size={32} />, 
       features: [
+        "All Features from Starter Plan",
+        "5+ Pages",
         "User Authentication",
         "Firestore Integration",
         "File Uploads",
         "Admin Dashboard",
-        "2–3 Weeks Delivery"
+        "1–2 Weeks Delivery"
       ],
       description: "Ideal for growing businesses with dynamic needs"
     },
@@ -44,7 +46,7 @@ const Pricing = () => {
         "Advanced Firestore Structure",
         "Cloud Functions",
         "Role-Based Access",
-        "4–6+ Weeks Delivery"
+        "3–5+ Weeks Delivery"
       ],
       description: "Enterprise-grade solutions for scale"
     }
