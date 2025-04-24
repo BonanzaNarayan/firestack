@@ -2,10 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
-import { FaBolt, FaCode, FaComments, FaMobileAlt, FaRocket } from 'react-icons/fa';
+import { FaBolt, FaChartLine, FaCode, FaComments, FaFire, FaMobileAlt, FaRocket } from 'react-icons/fa';
 import { FaBullseye, FaEye, FaCheckCircle } from 'react-icons/fa';
 import Footer from '../components/Footer';
 import SocialFloat from '../components/SocialFloat';
+import { desc } from 'framer-motion/client';
 
 const Home = () => {
   const services = [
@@ -28,6 +29,28 @@ const Home = () => {
       icon: <FaRocket />,
       title: "Startup Launchpad",
       description: "Rapid MVP development with CI/CD pipelines and cloud infrastructure for seamless scaling.",
+    },
+  ];
+
+  // Pakeges
+  const packages = [
+    {
+      name: "Starter Website",
+      description: "Perfect for personal brands and small businesses",
+      icon: <FaRocket size={32} />,
+      url: "/pricing",
+    },
+    {
+      name: "Business Web App",
+      description: "Ideal for growing businesses with dynamic needs",
+      icon: <FaChartLine size={32} />,
+      url: "/pricing",
+    },
+    {
+      name: "Premium SaaS Platform",
+      description: "Enterprise-grade solutions for scale",
+      icon: <FaFire size={32} />,
+      url: "/pricing",
     },
   ];
 
@@ -91,6 +114,53 @@ const Home = () => {
                   </div>
                 </motion.div>
               ))}
+            </div>
+          </motion.div>
+        </section>
+
+        {/* Packages */}
+        <section className="relative bg-gradient-to-b from-[#090327] to-[#1E1E2F] py-24 px-6">
+        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/dark-stripes.png')]" />
+          
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="max-w-7xl mx-auto"
+          >
+            <motion.h2
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent"
+            >
+              Our Packages
+            </motion.h2>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+              {
+                packages.map((pkg, index) => (
+                  <motion.div
+                    key={index}
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={cardVariants}
+                    className="group relative bg-[#1A1A2E]/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-orange-500/30 transition-all duration-300"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="relative z-10">
+                      <div className="mb-6 flex justify-center">
+                        <div className="p-4 bg-gradient-to-br from-orange-500 to-amber-600 rounded-2xl text-3xl text-white">
+                          {pkg.icon}
+                        </div>
+                      </div>
+                      <h3 className="text-xl font-bold mb-4 text-gray-100">{pkg.name}</h3>
+                      <p className="text-gray-400 leading-relaxed">{pkg.description}</p>
+                      <a href={pkg.url} className="text-orange-500 hover:underline mt-4 block">Learn More</a>
+                    </div>
+                  </motion.div>
+                ))
+              }
             </div>
           </motion.div>
         </section>
